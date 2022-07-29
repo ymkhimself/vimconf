@@ -1,0 +1,61 @@
+set nocompatible  "关闭兼容模式
+set nu  "设置行号
+set cursorline   "突出显示当前行
+set showmatch    "显示括号匹配
+set tabstop=4     "tab长度为4
+set shiftwidth=4  "设置自动缩进长度为4
+set autoindent     "继承前一行的缩进方式，适用于多行注释
+syntax enable
+syntax on
+
+"molokai 主题
+"set t_Co=256
+"colorscheme molokai
+"let g:molokai_original = 1
+"let g:rehash256 = 1
+
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'fatih/vim-go'
+Plugin 'Vallori/YouCompleteMe'        
+Plugin 'jiangmiao/auto-pairs'           "括号补全
+Plugin 'scrooloose/nerdtree'            "文件目录
+Plugin 'vim-airline/vim-airline'       "状态栏
+Plugin 'majutsushi/tagbar'  "显示函数、变量列表
+Plugin 'cormacrelf/vim-colors-github'  "主题
+Plugin 'rakr/vim-one'  "主题
+
+call vundle#end()
+filetype plugin indent on
+
+set vb t_vb=       "关闭响铃
+
+
+set termguicolors
+set background=dark
+colorscheme one 
+
+
+
+"colorscheme github  "github配色
+"let g:github_colors_soft = 1    "github 配色
+let g:tagbar_width=30 "tagbar 宽度
+"let g:tagbar_left = 1  "tagbar 显示在左边
+"let g:NERDTreeWinPos = "right"  "nerdtree 显示在右边
+
+"以下是vim-go相关
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_generate_tags = 1
+
+
+nmap <F10> :TagbarToggle<CR>
+nmap <F9> :NERDTree<CR>
