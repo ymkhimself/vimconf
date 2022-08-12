@@ -14,22 +14,21 @@ syntax on
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug  'gmarik/Vundle.vim'
+Plug  'fatih/vim-go'
+Plug  'Vallori/YouCompleteMe'        
+Plug  'jiangmiao/auto-pairs'           "括号补全
+Plug  'scrooloose/nerdtree'            "文件目录
+Plug  'vim-airline/vim-airline'       "状态栏
+Plug  'majutsushi/tagbar'  "显示函数、变量列表
+Plug  'cormacrelf/vim-colors-github'  "主题
+Plug  'rakr/vim-one'  "主题
+Plug  'morhetz/gruvbox' " 主题
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'fatih/vim-go'
-Plugin 'Vallori/YouCompleteMe'        
-Plugin 'jiangmiao/auto-pairs'           "括号补全
-Plugin 'scrooloose/nerdtree'            "文件目录
-Plugin 'vim-airline/vim-airline'       "状态栏
-Plugin 'majutsushi/tagbar'  "显示函数、变量列表
-Plugin 'cormacrelf/vim-colors-github'  "主题
-Plugin 'rakr/vim-one'  "主题
-Plugin 'morhetz/gruvbox' " 主题
+call plug#end()
 
-call vundle#end()
 filetype plugin indent on
 
 set vb t_vb=       "关闭响铃
