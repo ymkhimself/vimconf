@@ -27,6 +27,7 @@ Plugin 'vim-airline/vim-airline'       "状态栏
 Plugin 'majutsushi/tagbar'  "显示函数、变量列表
 Plugin 'cormacrelf/vim-colors-github'  "主题
 Plugin 'rakr/vim-one'  "主题
+Plugin 'morhetz/gruvbox' " 主题
 
 call vundle#end()
 filetype plugin indent on
@@ -36,7 +37,8 @@ set vb t_vb=       "关闭响铃
 
 set termguicolors
 set background=dark
-colorscheme one 
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
 
 
 
